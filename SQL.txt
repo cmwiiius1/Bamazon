@@ -1,0 +1,36 @@
+DROP DATABASE IF EXISTS bamazon;
+
+CREATE DATABASE bamazon;
+
+USE bamazon;
+
+CREATE TABLE products(
+
+  ItemID INT NOT NULL AUTO_INCREMENT,
+
+  ProductName VARCHAR(45) NOT NULL,
+
+  DepartmentName VARCHAR(45) NOT NULL,
+
+  Price INT default 0,
+
+  StockQuantity INT default 0,
+
+  PRIMARY KEY (ItemID)
+
+);
+
+INSERT INTO products (ProductName, DepartmentName, Price, StockQuantity) values ('Tablet', 'Electronics', '90', '20');
+INSERT INTO products (ProductName, DepartmentName, Price, StockQuantity) values ('eReader', 'Electronics', '50', '75');
+INSERT INTO products (ProductName, DepartmentName, Price, StockQuantity) values ('Laptop', 'Electronics', '150', '25');
+INSERT INTO products (ProductName, DepartmentName, Price, StockQuantity) values ('Monitor', 'Electronics', '100', '15');
+INSERT INTO products (ProductName, DepartmentName, Price, StockQuantity) values ('Keyboard', 'Electronics', '25', '80');
+INSERT INTO products (ProductName, DepartmentName, Price, StockQuantity) values ('Mouse', 'Electronics', '10', '100');
+INSERT INTO products (ProductName, DepartmentName, Price, StockQuantity) values ('Shirts', 'Clothing', '20', '40');
+INSERT INTO products (ProductName, DepartmentName, Price, StockQuantity) values ('Pants', 'Clothing', '20', '30');
+INSERT INTO products (ProductName, DepartmentName, Price, StockQuantity) values ('Dog Food', 'Pet Supplies', '15', '12');
+INSERT INTO products (ProductName, DepartmentName, Price, StockQuantity) values ('Cat Food', 'Pet Supplies', '10', '20');
+INSERT INTO products (ProductName, DepartmentName, Price, StockQuantity) values ('Dog Chew Toy', 'Pet Supplies', '5', '30');
+INSERT INTO products (ProductName, DepartmentName, Price, StockQuantity) values ('Cat Toy', 'Pet Supplies', '5', '10');
+
+SELECT * FROM products;
